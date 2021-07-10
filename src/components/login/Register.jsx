@@ -50,6 +50,7 @@ class Register extends Component {
   // Adding valiations for the Form Fields 
   onFirstNameChange = e => {
     const firstname = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (firstname === '' || !firstname.match(nameRegex)) {
       this.setState({ firstNameError: "enter a valid firstname" });
@@ -60,6 +61,7 @@ class Register extends Component {
 
   onmiddleNameChange = e => {
     const middlename = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (middlename === '' || !middlename.match(nameRegex)) {
       this.setState({ middleNameError: "Enter a Valid middleName" });
@@ -70,6 +72,7 @@ class Register extends Component {
 
   onlastNameChange = e => {
     const lastname = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (lastname === '' || !lastname.match(nameRegex)) {
       this.setState({ lastNameError: "Enter a Valid lastName" });
@@ -80,6 +83,7 @@ class Register extends Component {
 
   onOrganisationChange = e => {
     const organisation = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (organisation === '' || !organisation.match(nameRegex)) {
       this.setState({ organisationError: "Enter a valid Organisation Name" });
@@ -90,6 +94,7 @@ class Register extends Component {
 
   onPositionChange = e => {
     const position = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (position === '' || !position.match(nameRegex)) {
       this.setState({ positionError: "Enter the valid role name" });
@@ -100,6 +105,7 @@ class Register extends Component {
 
   onlocationChange = e => {
     const location = e.target.value;
+     //eslint-disable-next-line
     const nameRegex = /^[a-zA-Z ]{2,30}$/;
     if (location === '' || !location.match(nameRegex)) {
       this.setState({ locationError: "Enter a valid location" });
@@ -110,6 +116,7 @@ class Register extends Component {
 
   onPhoneChange = e => {
     const phone = e.target.value;
+     //eslint-disable-next-line
     const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
     if (phone === '' || !phone.match(phoneRegex)) {
 
@@ -121,6 +128,7 @@ class Register extends Component {
   }
   onEmailChange = e => {
     const email = e.target.value;
+     //eslint-disable-next-line
     const Emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email === '' || !email.match(Emailregex)) {
       this.setState({ emailError: "Enter a valid email" });
@@ -131,6 +139,7 @@ class Register extends Component {
   };
   onPasswordChange = e => {
     const password = e.target.value;
+    //eslint-disable-next-line
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (password === '' || !password.match(passwordRegex)) { this.setState({ passwordError: "Enter a valid password" }); }
     else { this.setState({ passwordError: null }); }
@@ -139,6 +148,7 @@ class Register extends Component {
   };
   onPassword2Change = e => {
     const password2 = e.target.value;
+    //eslint-disable-next-line
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (password2 === '' || !password2.match(passwordRegex)) { this.setState({ password2Error: "Enter a valid password" }); }
     else { this.setState({ password2Error: null }); }

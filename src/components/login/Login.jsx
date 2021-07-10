@@ -39,6 +39,7 @@ class Login extends Component {
 
   onEmailChange = e => {
     const email = e.target.value;
+    //eslint-disable-next-line
     const Emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email === '' || !email.match(Emailregex)) {
       this.setState({ emailError: "Enter a valid email" });
@@ -49,6 +50,7 @@ class Login extends Component {
   };
   onPasswordChange = e => {
     const password = e.target.value;
+     //eslint-disable-next-line
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (password === '' || !password.match(passwordRegex)) { this.setState({ passwordError: "Enter a valid password" }); }
     else { this.setState({ passwordError: null }); }
