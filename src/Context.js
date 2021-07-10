@@ -23,8 +23,7 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
-    let unmounted = false;
-    if (!unmounted) {
+    
       navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         .then((currentStream) => {
           setStream(currentStream);
@@ -35,7 +34,7 @@ const ContextProvider = ({ children }) => {
       socket.on('callUser', ({ from, name: callername, signal }) => {
         setCall({ isReceivingCall: true, from, name: callername, signal });
       });
-    }
+    
   }, []);
 
   const answerCall = () => {
